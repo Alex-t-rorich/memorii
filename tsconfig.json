@@ -1,0 +1,11 @@
+{
+  "extends": "./.nuxt/tsconfig.json",
+  "include": [
+    ".",
+    "tailwind.config.ts",
+    "nuxt.config.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

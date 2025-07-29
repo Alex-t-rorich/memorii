@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* 1) theme vars */
+@theme {
+  --color-accent: #2fa2aa;
+  --color-brand: #034979;
+  --color-neutral: #b5a08e;
+  --color-gold: #dbad3f;
+
+  --font-family-montserrat: "Montserrat", sans-serif;
+  --font-family-noto-serif: "Noto Serif", serif;
+}
+
+/* 2) base layer: global element styles */
+@layer base {
+  /* everything defaults to Montserrat Medium */
+  html {
+    font-family: var(--font-family-montserrat);
+    font-weight: 500;
+  }
+
+  /* headings get Noto Serif Bold */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-montserrat);
+    font-weight: 700;
+  }
+}
+
+/* 3) utility layer: make families available if you ever need fine-grain controls */
+@layer utilities {
+  .font-montserrat    { font-family: var(--font-family-montserrat); }
+  .font-noto-serif    { font-family: var(--font-family-noto-serif); }
+}
